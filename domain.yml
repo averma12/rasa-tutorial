@@ -1,22 +1,36 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- bot_objective
-- restaurant_search
-- telling_cuisine
-- get_location
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- bot_objective:
+    use_entities: true
+- restaurant_search:
+    use_entities: true
+- telling_cuisine:
+    use_entities: true
+- get_location:
+    use_entities: true
 entities:
 - cuisine
 - location
+slots: {}
 responses:
   utter_greet:
   - text: Hey! How are you, this is utter_greet?
@@ -25,8 +39,8 @@ responses:
   utter_welcome:
   - text: Hi ! How can I help you today ?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -44,9 +58,11 @@ responses:
   utter_location_response:
   - text: Welcome
   utter_restaurant_search:
-  - text: "Let me find a restaurant for you . Can you tell what cuisine are you searching for ?"
+  - text: Let me find a restaurant for you . Can you tell what cuisine are you searching for ?
   utter_search_cuisine:
-  - text: "Let me search restaurants for that cuisine for you"
+  - text: Let me search restaurants for that cuisine for you
 actions:
-  - action_hello_world
-  - action_custom_cuisine
+- action_hello_world
+- action_custom_cuisine
+forms: {}
+e2e_actions: []
