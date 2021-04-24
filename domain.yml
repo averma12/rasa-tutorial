@@ -1,0 +1,52 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- bot_objective
+- restaurant_search
+- telling_cuisine
+- get_location
+entities:
+- cuisine
+- location
+responses:
+  utter_greet:
+  - text: Hey! How are you, this is utter_greet?
+  utter_custom_greet:
+  - text: Custom response from custom action
+  utter_welcome:
+  - text: Hi ! How can I help you today ?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_sorry:
+  - text: Well sorry about that! I hope you still have a good day
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_objective:
+  - text: I am here to satisy your hunder !!!
+  utter_where_are_you_from:
+  - text: 'Where are you from ? '
+  utter_location_response:
+  - text: Welcome
+  utter_restaurant_search:
+  - text: "Let me find a restaurant for you . Can you tell what cuisine are you searching for ?"
+  utter_search_cuisine:
+  - text: "Let me search restaurants for that cuisine for you"
+actions:
+  - action_hello_world
+  - action_custom_cuisine
