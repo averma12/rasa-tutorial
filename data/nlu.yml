@@ -73,6 +73,7 @@ nlu:
     - so perfect
     - I feel good
     - Me gusta
+    - I'm good
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -117,153 +118,156 @@ nlu:
     - I am from [Ahmedabad](location)
     - I am from [Delhi](location)
     - I am from [Chennai](location)
-
 - intent: restaurant_search
   examples: |
-      - please get me some restaurants near me
-      - please get me some restaurants
-      - i am looking for some restaurants  near me
-      - i am looking for some restaurants
-      - get me some restaurants
-      - looking for some restaurants
-      - get me some restaurants please
-      - hey i am looking for some restaurants
-      - looking for some restraunts
-      - get me few restaurants
-      - please provide me a list of restaurants
-      - looking for some food points
-      - i am hungry
-      - tell me some food points near to me
-      - give me some food stalls
-      - tell me some restaurants
-      - give me some restaurants
-      - get me a list of restaurants near to me
-      - provide me some restaurants
-      - hey can you help me to find some restaurants nearby
-      - please get me a list of restaurants
-      - please get me a list of restaurants near by
-      - please help me find some restaurants
-      - get me some restaurants near by
-      - get me some restaurants near me
-      - i am hungry get me some restaurants near by
-      - please get me some restaurants near by
-      - please get me a list of all restaurants near by
-      - please get me all the restaurants near by
-      - please give me a list of restaurants
-      - get me a list of restaurants
-      - please find me some restaurants
-      - please get me a list of all restaurants
-      - get me a list of all restaurants near to me
-      - tell me some restaurants here
-      - i am hungry please tell me some restaurants near to me
-      - i want to eat something please tell me some location near by
-      - please tell me some food points here
-      - get me some restaurants neary by
-      - get me some food points
-      - find some food places near to me
-      - get me some restaurants near to me
-      - i am looking for some food points
-      - i am looking for restaurants
-      - get me some flight details
-      - Hey, I am looking for a food.
-      - Hey, I am looking to eat something.
-
-
+    - please get me some restaurants near me
+    - please get me some restaurants
+    - i am looking for some restaurants  near me
+    - i am looking for some restaurants
+    - get me some restaurants
+    - looking for some restaurants
+    - get me some restaurants please
+    - hey i am looking for some restaurants
+    - looking for some restraunts
+    - get me few restaurants
+    - please provide me a list of restaurants
+    - looking for some food points
+    - i am hungry
+    - tell me some food points near to me
+    - give me some food stalls
+    - tell me some restaurants
+    - give me some restaurants
+    - get me a list of restaurants near to me
+    - provide me some restaurants
+    - hey can you help me to find some restaurants nearby
+    - please get me a list of restaurants
+    - please get me a list of restaurants near by
+    - please help me find some restaurants
+    - get me some restaurants near by
+    - get me some restaurants near me
+    - i am hungry get me some restaurants near by
+    - please get me some restaurants near by
+    - please get me a list of all restaurants near by
+    - please get me all the restaurants near by
+    - please give me a list of restaurants
+    - get me a list of restaurants
+    - please find me some restaurants
+    - please get me a list of all restaurants
+    - get me a list of all restaurants near to me
+    - tell me some restaurants here
+    - i am hungry please tell me some restaurants near to me
+    - i want to eat something please tell me some location near by
+    - please tell me some food points here
+    - get me some restaurants neary by
+    - get me some food points
+    - find some food places near to me
+    - get me some restaurants near to me
+    - i am looking for some food points
+    - i am looking for restaurants
+    - get me some flight details
+    - Hey, I am looking for a food.
+    - Hey, I am looking to eat something.
+    - I am feeling hungry
 - intent: telling_cuisine
-  examples : |
-      - i would prefer to eat [mexican](cuisine)
-      - i would love to eat [italian](cuisine)
-      - I would like to have [chinese](cuisine) food
-      - i would love to eat [mexican](cuisine) food
-      - i would like to eat [chinese](cuisine)
-      - please provide me [north indian](cuisine) food
-      - please provide me [italian](cuisine) food
-      - please give me [mexican](cuisine) food
-      - please give me [italian](cuisine) food
-      - please give me some [thai](cuisine) food
-      - i will eat [north indian](cuisine) food
-      - i would love to eat [south indian](cuisine) food
-      - i will prefer [south indian](cuisine) food
-      - i will prefer to have [north indian](cuisine)
-      - i will eat [chinese](cuisine)
-      - i would love to eat [arabian](cuisine) food
-      - my choice will be [arabian](cuisine)
-      - i would love to eat [mexican](cuisine)
-      - i would like to have [italian](cuisine)
-      - i would like to eat [italian](cuisine)
-      - i would like to have [chinese](cuisine)
-      - i will prefer [chinese](cuisine) food
-      - i need [italian](cuisine) food
-      - i would like to eat [italian](cuisine) food
-      - i will prefer [italian](cuisine) food
-      - i would love to eat [chinese](cuisine) food
-      - i would love to eat [chinese](cuisine)
-      - i would love to eat [north indian](cuisine) food
-      - I would love to eat [Indian](cuisine) food
-      - [italian](cuisine)
-      - [chinese](cuisine)
-      - [thai](cuisine)
-      - i will prefer to eat [chinese](cuisine) food
-      - i would love to eat [Italian](cuisine) food
-      - I would love to eat [pasta](cuisine:Italian)
-      - I will prefer to eat [lasagna](cuisine:Italian)
-      - I would love to eat [pizza](cuisine:Italian)
-      - I would love to eat [Risotto] (cuisine:Italian)
-      - i would love to eat [risotto] (cuisine:Italian)
-      - [african](cuisine)
-      - [australian](cuisine)
-      - i will prefer [australian](cuisine) then
-      - i will prefer [australian](cuisine)
-      - i want to eat [italian](cuisine) food
-      - i would like to eat [Egyptian](cuisine)
-      - please provide me [Egyptian](cuisine) food
-      - my choice will be [Egyptian](cuisine)
-      - i would like to eat [Greek](cuisine)
-      - please provide me [Greek](cuisine) food
-      - my choice will be [Greek](cuisine)
-      - i would like to eat [Iranian](cuisine)
-      - please provide me [Iranian](cuisine) food
-      - my choice will be [Iranian](cuisine)
-      - i would like to eat [Maharashtrian](cuisine)
-      - please provide me [Maharashtrian](cuisine) food
-      - my choice will be [Maharashtrian](cuisine)
-      - i would like to eat [Rajasthani](cuisine)
-      - please provide me [Rajasthani](cuisine) food
-      - my choice will be [Rajasthani](cuisine)
-      - i would like to eat [Seafood](cuisine)
-      - please provide me [Seafood](cuisine) food
-      - my choice will be [Seafood](cuisine)
-      - i would like to eat [Street Food](cuisine)
-      - please provide me [Street Food](cuisine)
-      - my choice will be [Street Food](cuisine)
-      - i would like to eat [Rolls](cuisine)
-      - please provide me [Rolls](cuisine) food
-      - my choice will be [Rolls](cuisine)
-      - [Momos](cuisine)
-      - [Kebab](cuisine)
-      - [salads](cuisine)
-      - i would like to eat [Kebab](cuisine)
-      - please provide me [Kashmiri](cuisine) food
-      - my choice will be [Healthy Food](cuisine)
-      - i would like to eat [Momos](cuisine)
-      - please provide me [Fusion](cuisine) food
-      - my choice will be [Kashmiri](cuisine)
-      - i would like to eat [Wraps](cuisine)
-      - please provide me [Wraps](cuisine)
-      - my choice will be [Wraps](cuisine)
-      - i would like to eat [Healthy Food](cuisine)
-      - please provide me [Mongolian](cuisine) food
-      - my choice will be [Fusion](cuisine)
-      - i would like to eat [Odia](cuisine)
-      - please provide me [Odia](cuisine) food
-      - my choice will be [Momos](cuisine)
-      - i would like to eat [Belgian](cuisine)
-      - please provide me [Belgian](cuisine) food
-      - [pizza](cuisine)
-      - [rolls](cuisine)
-      - [Juices](cuisine)
-      - [Tea](cuisine)
-      - my choice will be [Juices](cuisine)
-      - i would like to have [Juices](cuisine)
-      - my choice will be [Tea](cuisine)
-      - i would like to have [Tea](cuisine)
+  examples: |
+    - i would prefer to eat [mexican](cuisine)
+    - i would love to eat [italian](cuisine)
+    - I would like to have [chinese](cuisine) food
+    - i would love to eat [mexican](cuisine) food
+    - i would like to eat [chinese](cuisine)
+    - please provide me [north indian](cuisine) food
+    - please provide me [italian](cuisine) food
+    - please give me [mexican](cuisine) food
+    - please give me [italian](cuisine) food
+    - please give me some [thai](cuisine) food
+    - i will eat [north indian](cuisine) food
+    - i would love to eat [south indian](cuisine) food
+    - i will prefer [south indian](cuisine) food
+    - i will prefer to have [north indian](cuisine)
+    - i will eat [chinese](cuisine)
+    - i would love to eat [arabian](cuisine) food
+    - my choice will be [arabian](cuisine)
+    - i would love to eat [mexican](cuisine)
+    - i would like to have [italian](cuisine)
+    - i would like to eat [italian](cuisine)
+    - i would like to have [chinese](cuisine)
+    - i will prefer [chinese](cuisine) food
+    - i need [italian](cuisine) food
+    - i would like to eat [italian](cuisine) food
+    - i will prefer [italian](cuisine) food
+    - i would love to eat [chinese](cuisine) food
+    - i would love to eat [chinese](cuisine)
+    - i would love to eat [north indian](cuisine) food
+    - I would love to eat [Indian](cuisine) food
+    - [italian](cuisine)
+    - [chinese](cuisine)
+    - [thai](cuisine)
+    - i will prefer to eat [chinese](cuisine) food
+    - i would love to eat [Italian](cuisine) food
+    - I would love to eat [pasta]{"entity": "cuisine", "value": "Italian"}
+    - I will prefer to eat [lasagna]{"entity": "cuisine", "value": "Italian"}
+    - I would love to eat [pizza]{"entity": "cuisine", "value": "Italian"}
+    - I would love to eat [Risotto] (cuisine:Italian)
+    - i would love to eat [risotto] (cuisine:Italian)
+    - [african](cuisine)
+    - [australian](cuisine)
+    - i will prefer [australian](cuisine) then
+    - i will prefer [australian](cuisine)
+    - i want to eat [italian](cuisine) food
+    - i would like to eat [Egyptian](cuisine)
+    - please provide me [Egyptian](cuisine) food
+    - my choice will be [Egyptian](cuisine)
+    - i would like to eat [Greek](cuisine)
+    - please provide me [Greek](cuisine) food
+    - my choice will be [Greek](cuisine)
+    - i would like to eat [Iranian](cuisine)
+    - please provide me [Iranian](cuisine) food
+    - my choice will be [Iranian](cuisine)
+    - i would like to eat [Maharashtrian](cuisine)
+    - please provide me [Maharashtrian](cuisine) food
+    - my choice will be [Maharashtrian](cuisine)
+    - i would like to eat [Rajasthani](cuisine)
+    - please provide me [Rajasthani](cuisine) food
+    - my choice will be [Rajasthani](cuisine)
+    - i would like to eat [Seafood](cuisine)
+    - please provide me [Seafood](cuisine) food
+    - my choice will be [Seafood](cuisine)
+    - i would like to eat [Street Food](cuisine)
+    - please provide me [Street Food](cuisine)
+    - my choice will be [Street Food](cuisine)
+    - i would like to eat [Rolls](cuisine)
+    - please provide me [Rolls](cuisine) food
+    - my choice will be [Rolls](cuisine)
+    - [Momos](cuisine)
+    - [Kebab](cuisine)
+    - [salads](cuisine)
+    - i would like to eat [Kebab](cuisine)
+    - please provide me [Kashmiri](cuisine) food
+    - my choice will be [Healthy Food](cuisine)
+    - i would like to eat [Momos](cuisine)
+    - please provide me [Fusion](cuisine) food
+    - my choice will be [Kashmiri](cuisine)
+    - i would like to eat [Wraps](cuisine)
+    - please provide me [Wraps](cuisine)
+    - my choice will be [Wraps](cuisine)
+    - i would like to eat [Healthy Food](cuisine)
+    - please provide me [Mongolian](cuisine) food
+    - my choice will be [Fusion](cuisine)
+    - i would like to eat [Odia](cuisine)
+    - please provide me [Odia](cuisine) food
+    - my choice will be [Momos](cuisine)
+    - i would like to eat [Belgian](cuisine)
+    - please provide me [Belgian](cuisine) food
+    - [pizza](cuisine)
+    - [rolls](cuisine)
+    - [Juices](cuisine)
+    - [Tea](cuisine)
+    - my choice will be [Juices](cuisine)
+    - i would like to have [Juices](cuisine)
+    - my choice will be [Tea](cuisine)
+    - i would like to have [Tea](cuisine)
+- synonym: Italian
+  examples: |
+    - pasta
+    - lasagna
+    - pizza
