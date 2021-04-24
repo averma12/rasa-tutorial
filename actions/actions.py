@@ -36,7 +36,7 @@ class ActionCustomCusine(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(response="utter_search_cuisine")
+        dispatcher.utter_message(text="Let me search some restaurants for you")
 
         return []
 
