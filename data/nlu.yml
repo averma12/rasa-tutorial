@@ -18,6 +18,7 @@ nlu:
     - sup bro
     - sup the whack's up
     - namaste
+    - [Hi](cuisine)
 - intent: goodbye
   examples: |
     - good afternoon
@@ -74,6 +75,7 @@ nlu:
     - I feel good
     - Me gusta
     - I'm good
+    - I'm great
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -92,6 +94,8 @@ nlu:
     - so sad
     - Me no gusta
     - I'm not great
+    - I'm fine
+    - I'm not good
 - intent: bot_objective
   examples: |
     - What is your objective ?
@@ -168,6 +172,8 @@ nlu:
     - Hey, I am looking for a food.
     - Hey, I am looking to eat something.
     - I am feeling hungry
+    - I'm hungry
+    - I am hungry
 - intent: telling_cuisine
   examples: |
     - i would prefer to eat [mexican](cuisine)
@@ -266,6 +272,10 @@ nlu:
     - i would like to have [Juices](cuisine)
     - my choice will be [Tea](cuisine)
     - i would like to have [Tea](cuisine)
+    - I want to have [Indian](cuisine)
+    - [Indian](cuisine)
+    - I want [Italian](cuisine) cuisine
+    - I want [italian](cuisine) cuisine
 - synonym: Italian
   examples: |
     - pasta
