@@ -276,6 +276,8 @@ nlu:
     - [Indian](cuisine)
     - I want [Italian](cuisine) cuisine
     - I want [italian](cuisine) cuisine
+    - I want to have [Italian](cuisine)
+    - I want to have continental food
 - synonym: Italian
   examples: |
     - pasta
