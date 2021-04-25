@@ -17,6 +17,10 @@ intents:
 entities:
 - cuisine
 - location
+slots:
+  cuisine:
+    type: text
+
 responses:
   utter_greet:
   - text: Hey! How are you, this is utter_greet?
