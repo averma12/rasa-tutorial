@@ -19,6 +19,7 @@ nlu:
     - sup the whack's up
     - namaste
     - Hello
+    - [Hi](cuisine)
 - intent: goodbye
   examples: |
     - good afternoon
