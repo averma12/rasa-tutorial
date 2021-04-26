@@ -43,9 +43,9 @@ class ActionCustomCusine(Action):
         #print(tracker.events_after_latest_restart())
         entity = tracker.get_slot("cuisine")
         if entity in ["Hi","Hello"]:
-            dispatcher.utter_message(response="utter_greet")
+            dispatcher.utter_message(response = "utter_greet")
         else:
-            dispatcher.utter_message(text=f"Let me search some restaurants for {entity} cuisine for you")
+            dispatcher.utter_message(text = f"Let me search some restaurants for {entity} cuisine for you")
 
         return []
 
