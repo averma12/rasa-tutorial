@@ -18,6 +18,7 @@ nlu:
     - sup bro
     - sup the whack's up
     - namaste
+    - Hello
 - intent: goodbye
   examples: |
     - good afternoon
@@ -277,6 +278,8 @@ nlu:
     - I want [italian](cuisine) cuisine
     - I want to have [Italian](cuisine)
     - I want to have continental food
+    - I am looking for [Indian](cuisine) food
+    - I want to have [Italian](cuisine) food
 - synonym: Italian
   examples: |
     - pasta
