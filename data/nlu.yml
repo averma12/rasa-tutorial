@@ -19,7 +19,7 @@ nlu:
     - sup the whack's up
     - namaste
     - Hello
-    - [Hi](cuisine)
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -77,6 +77,7 @@ nlu:
     - Me gusta
     - I'm good
     - I'm great
+    - I am feeling great
 - intent: mood_unhappy
   examples: |
     - my day was horrible
