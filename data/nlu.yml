@@ -282,6 +282,7 @@ nlu:
     - I want to have continental food
     - I am looking for [Indian](cuisine) food
     - I want to have [Italian](cuisine) food
+    - I am looking for [Indian](cuisine) cuisine
 - synonym: Italian
   examples: |
     - pasta
