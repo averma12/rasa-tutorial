@@ -1,14 +1,11 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: action_hello_world
-
 - story: sad path 1
   steps:
   - intent: greet
@@ -20,7 +17,6 @@ stories:
     - intent: mood_great
     - intent: affirm
   - action: utter_happy
-
 - story: sad path 2
   steps:
   - intent: greet
@@ -30,7 +26,6 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_sorry
-
 - story: user asks for restaurant
   steps:
   - intent: greet
@@ -39,5 +34,17 @@ stories:
   - action: utter_restaurant_search
   - intent: telling_cuisine
     entities:
-      - cuisine: Italian
+    - cuisine: Italian
+  - action: action_custom_cuisine
+- story: Story from Conversation ID 210ab8b4239742aa9c9eb108c46fd1c5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_restaurant_search
+  - intent: telling_cuisine
+    entities:
+    - cuisine: Indian
+  - slot_was_set:
+    - cuisine: Indian
   - action: action_custom_cuisine
