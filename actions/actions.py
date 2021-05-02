@@ -12,6 +12,8 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
+from .cusine_restaurants import Restaurant_List
 #
 #
 class ActionHelloWorld(Action):
@@ -42,12 +44,30 @@ class ActionCustomCusine(Action):
         print(tracker.get_intent_of_latest_message())
         #print(tracker.events_after_latest_restart())
         entity = tracker.get_slot("cuisine")
-        if entity in ["Hi","Hello"]:
-            dispatcher.utter_message(response = "utter_greet")
+        if entity not in Restaurant_List.keys():
+            dispatcher.utter_message(response = "utter_sorry_cuisine")
+            return []
         else:
-            dispatcher.utter_message(text = f"Let me search some restaurants for {entity} cuisine for you")
+            restaurants = Restaurant_List[entity]
+            dispatcher.utter_message(text = f"Let me find some restaurants for {entity} cuisine for you")
+
+            return [SlotSet("restaurants",restaurants)]
+
+class ActionFindRestaurants(Action):
+    def name(self) -> Text:
+        return "action_find_restaurants"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        restaurants = tracker.get_slot("restaurants")
+        restaurants = ",".join(restaurants)
+        dispatcher.utter_message(f"These are the restaurants I found {restaurants}")
+
 
         return []
+
+
 
 
 

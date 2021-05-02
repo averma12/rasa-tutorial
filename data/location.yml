@@ -1,0 +1,16 @@
+version: "2.0"
+nlu:
+  - lookup: location
+    examples: |
+      - Mumbai
+      - Hyderabad
+      - Ahmedabad
+      - Madhepura
+      - Vishakapatnam
+      - Delhi
+      - Bengaluru
+      - Pune
+      - Vadodra
+      - Surat
+      - Chandigarh
+      - Chennai

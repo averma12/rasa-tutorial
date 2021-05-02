@@ -22,7 +22,7 @@ nlu:
     - Hi
 - intent: goodbye
   examples: |
-    - good afternoon
+    - good day
     - cu
     - good by
     - cee you later
@@ -176,6 +176,8 @@ nlu:
     - I am feeling hungry
     - I'm hungry
     - I am hungry
+    - I am feeling like ordering some food
+    - I am looking for food delivery
 - intent: telling_cuisine
   examples: |
     - i would prefer to eat [mexican](cuisine)

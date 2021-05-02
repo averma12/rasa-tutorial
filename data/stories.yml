@@ -41,3 +41,13 @@ stories:
     entities:
       - cuisine: Italian
   - action: action_custom_cuisine
+  - slot_was_set:
+      - restaurants: ["Urban Tadka","Goilas Butter Chicken","Shiv Sagar"]
+  - action: action_find_restaurants
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+  - action: utter_restaurant_search
+  - intent: restaurant_search
+  - action: utter_restaurant_search
