@@ -24,6 +24,13 @@ slots:
   restaurants:
     type: list
     influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
+  logged_in:
+    type: bool
+    influence_conversation: true
+
 responses:
   utter_greet:
   - text: Hey! How are you, this is utter_greet?
@@ -56,8 +63,11 @@ responses:
   - text: Let me search restaurants for that cuisine for you
   utter_sorry_cuisine:
   - text: Sorry we don't seem to have that cuisine available today
+  utter_email:
+  - text: Please enter your email to access the restaurant bot
 actions:
 - action_custom_cuisine
 - action_find_restaurants
 - action_hello_world
 - utter_restaurant_search
+- action_check_user

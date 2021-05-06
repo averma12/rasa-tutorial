@@ -36,7 +36,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: restaurant_search
-  - action: utter_restaurant_search
+  - action: utter_ask_email
+  - intent: give_email
+  - action: action_check_user
+  - slot_was_set:
+      - email: abhinav.verma@gmail.com
   - intent: telling_cuisine
     entities:
       - cuisine: Italian
@@ -45,9 +49,3 @@ stories:
       - restaurants: ["Urban Tadka","Goilas Butter Chicken","Shiv Sagar"]
   - action: action_find_restaurants
 
-- story: interactive_story_1
-  steps:
-  - intent: restaurant_search
-  - action: utter_restaurant_search
-  - intent: restaurant_search
-  - action: utter_restaurant_search

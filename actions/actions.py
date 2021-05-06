@@ -13,7 +13,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from .cusine_restaurants import Restaurant_List
+from .cusine_restaurants import Restaurant_List,approved_users
 #
 #
 class ActionHelloWorld(Action):
@@ -28,6 +28,27 @@ class ActionHelloWorld(Action):
         dispatcher.utter_message(text="Congratulations on building your first custom action")
 
         return []
+
+class ActionCheckUser(Action):
+    def name(self) -> Text:
+        return "action_check_user"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        if tracker.get_slot("email"):
+            email = tracker.get_slot("email")
+            if email in approved_users:
+                dispatcher.utter_message(response="utter_restaurant_search")
+                return []
+            else:
+                dispatcher.utter_message(text="Sorry only approved users can access this feature")
+                return []
+
+        dispatcher.utter_message(response="utter_email")
+
+        return []
+
 
 class ActionCustomCusine(Action):
 
@@ -46,7 +67,7 @@ class ActionCustomCusine(Action):
         entity = tracker.get_slot("cuisine")
         if entity not in Restaurant_List.keys():
             dispatcher.utter_message(response = "utter_sorry_cuisine")
-            return []
+            return [SlotSet("cuisine",None)]
         else:
             restaurants = Restaurant_List[entity]
             dispatcher.utter_message(text = f"Let me find some restaurants for {entity} cuisine for you")
@@ -66,6 +87,8 @@ class ActionFindRestaurants(Action):
 
 
         return []
+
+
 
 
 
