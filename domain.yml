@@ -37,7 +37,7 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_rephrase:
-  - text: I did not get you . Can you repeat it biyaach ?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
