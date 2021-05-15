@@ -40,10 +40,15 @@ stories:
   - intent: telling_cuisine
     entities:
       - cuisine: Italian
+  - slot_was_set:
+      - cuisine: Italian
   - action: action_custom_cuisine
   - slot_was_set:
       - restaurants: ["Urban Tadka","Goilas Butter Chicken","Shiv Sagar"]
   - action: action_find_restaurants
+  - slot_was_set:
+      - cuisine: None
+
 
 - story: interactive_story_1
   steps:
@@ -51,3 +56,4 @@ stories:
   - action: utter_restaurant_search
   - intent: restaurant_search
   - action: utter_restaurant_search
+

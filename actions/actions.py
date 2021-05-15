@@ -46,7 +46,7 @@ class ActionCustomCusine(Action):
         entity = tracker.get_slot("cuisine")
         if entity not in Restaurant_List.keys():
             dispatcher.utter_message(response = "utter_sorry_cuisine")
-            return []
+            return [SlotSet("cuisine",None)]
         else:
             restaurants = Restaurant_List[entity]
             dispatcher.utter_message(text = f"Let me find some restaurants for {entity} cuisine for you")
@@ -65,7 +65,7 @@ class ActionFindRestaurants(Action):
         dispatcher.utter_message(f"These are the restaurants I found {restaurants}")
 
 
-        return []
+        return [SlotSet("cuisine",None)]
 
 
 
