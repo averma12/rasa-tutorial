@@ -17,6 +17,7 @@ intents:
 entities:
 - cuisine
 - location
+- time
 slots:
   cuisine:
     type: text
@@ -24,6 +25,8 @@ slots:
   restaurants:
     type: list
     influence_conversation: true
+  time:
+    type: any
 responses:
   utter_greet:
   - text: Hey! How are you, this is utter_greet?
@@ -58,6 +61,8 @@ responses:
   - text: Let me search restaurants for that cuisine for you
   utter_sorry_cuisine:
   - text: Sorry we don't seem to have that cuisine available today
+  utter_time:
+  - text: "It is {time}."
 actions:
 - action_custom_cuisine
 - action_find_restaurants

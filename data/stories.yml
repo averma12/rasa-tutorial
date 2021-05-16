@@ -57,3 +57,7 @@ stories:
   - intent: restaurant_search
   - action: utter_restaurant_search
 
+- story: ask time
+  steps:
+  - intent: ask_time
+  - action: utter_time

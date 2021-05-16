@@ -291,3 +291,10 @@ nlu:
     - pasta
     - lasagna
     - pizza
+
+- intent: ask_time
+  examples: |
+    - what time is right now ?
+    - what day is it today ?
+    - what's today ?
+    - what's yesterday ?

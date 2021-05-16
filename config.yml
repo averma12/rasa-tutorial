@@ -24,6 +24,9 @@ pipeline:
    - name: FallbackClassifier
      threshold: 0.7
      ambiguity_threshold: 0.1
+   - name: DucklingEntityExtractor
+     url: http://65.0.251.144:8000
+     dimensions: ["time"]
 
 
 # Configuration for Rasa Core.
