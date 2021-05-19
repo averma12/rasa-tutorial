@@ -65,7 +65,7 @@ class ActionFindRestaurants(Action):
         dispatcher.utter_message(f"These are the restaurants I found {restaurants}")
 
 
-        return [SlotSet("cuisine",None)]
+        return []
 
 
 

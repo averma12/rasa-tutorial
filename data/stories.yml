@@ -46,18 +46,185 @@ stories:
   - slot_was_set:
       - restaurants: ["Urban Tadka","Goilas Butter Chicken","Shiv Sagar"]
   - action: action_find_restaurants
-  - slot_was_set:
-      - cuisine: None
+  - action: utter_ask_for_booking
+  - intent: affirm
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - active_loop: null
+  - action: utter_slot_values
+
+
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: restaurant_search
+#  - action: utter_restaurant_search
+#  - intent: restaurant_search
+#  - action: utter_restaurant_search
+#
+#- story: ask time
+#  steps:
+#  - intent: ask_time
+#  - action: utter_time
+#
+#- story: interactive_story_1
+#  steps:
+#  - intent: restaurant_search
+#  - action: utter_restaurant_search
+#  - intent: telling_cuisine
+#    entities:
+#    - cuisine: Indian
+#  - slot_was_set:
+#    - cuisine: Indian
+#  - action: action_custom_cuisine
+#  - slot_was_set:
+#    - restaurants:
+#      - Urban Tadka
+#      - Goilas Butter Chicken
+#      - Shiv Sagar
+#  - action: utter_ask_for_booking
+#  - intent: affirm
+#  - action: restaurant_form
+#  - active_loop: restaurant_form
+#  - slot_was_set:
+#    - requested_slot: num_people
+#  - intent: nlu_fallback
+#    entities:
+#    - number: 5
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: restaurant_search
+#  - action: utter_restaurant_search
+#  - intent: telling_cuisine
+#    entities:
+#    - cuisine: Indian
+#  - slot_was_set:
+#    - cuisine: Indian
+#  - action: action_custom_cuisine
+#  - slot_was_set:
+#    - restaurants:
+#      - Urban Tadka
+#      - Goilas Butter Chicken
+#      - Shiv Sagar
+#  - action: utter_ask_for_booking
+#  - intent: affirm
+#  - action: restaurant_form
+#  - active_loop: restaurant_form
+#  - slot_was_set:
+#    - requested_slot: num_people
+#  - intent: affirm
+#    entities:
+#    - number: 5
+#
+#- story: interactive_story_2
+#  steps:
+#  - intent: telling_cuisine
+#    entities:
+#    - cuisine: Indian
+#  - slot_was_set:
+#    - cuisine: Indian
+#  - action: action_custom_cuisine
+#  - action: action_find_restaurants
+#
+#- story: interactive_story_3
+#  steps:
+#  - intent: telling_cuisine
+#    entities:
+#    - cuisine: Indian
+#  - slot_was_set:
+#    - cuisine: Indian
+#  - action: action_custom_cuisine
+#  - slot_was_set:
+#    - restaurants:
+#      - Urban Tadka
+#      - Goilas Butter Chicken
+#      - Shiv Sagar
+#  - action: action_find_restaurants
+#  - action: utter_ask_for_booking
+#  - intent: affirm
+#  - action: restaurant_form
+#  - active_loop: restaurant_form
+#  - slot_was_set:
+#    - requested_slot: num_people
+#  - slot_was_set:
+#    - num_people: 5
+#  - slot_was_set:
+#    - num_people: 5
+#  - slot_was_set:
+#    - requested_slot: phone_num
+#  - intent: nlu_fallback
+#    entities:
+#    - number: 9820234828
 
 
 - story: interactive_story_1
   steps:
-  - intent: restaurant_search
-  - action: utter_restaurant_search
-  - intent: restaurant_search
-  - action: utter_restaurant_search
+  - intent: telling_cuisine
+    entities:
+    - cuisine: Indian
+  - slot_was_set:
+    - cuisine: Indian
+  - action: action_custom_cuisine
+  - slot_was_set:
+    - restaurants:
+      - Urban Tadka
+      - Goilas Butter Chicken
+      - Shiv Sagar
+  - action: utter_ask_for_booking
+  - intent: affirm
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: num_people
+  - slot_was_set:
+    - num_people: '6'
+  - slot_was_set:
+    - num_people: '6'
+  - slot_was_set:
+    - requested_slot: phone_num
+  - slot_was_set:
+    - phone_num: '9820234828'
+  - slot_was_set:
+    - phone_num: '9820234828'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_slot_values
 
-- story: ask time
+
+- story: interactive_story_1
   steps:
-  - intent: ask_time
-  - action: utter_time
+  - intent: telling_cuisine
+    entities:
+    - cuisine: Indian
+  - slot_was_set:
+    - cuisine: Indian
+  - action: action_custom_cuisine
+  - slot_was_set:
+    - restaurants:
+      - Urban Tadka
+      - Goilas Butter Chicken
+      - Shiv Sagar
+  - action: utter_ask_for_booking
+  - intent: affirm
+  - action: restaurant_form
+  - active_loop: restaurant_form
+  - slot_was_set:
+    - requested_slot: num_people
+  - slot_was_set:
+    - num_people: '6'
+  - slot_was_set:
+    - num_people: '6'
+  - slot_was_set:
+    - requested_slot: phone_num
+  - slot_was_set:
+    - phone_num: '9820234828'
+  - slot_was_set:
+    - phone_num: '9820234828'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_slot_values
+  - intent: goodbye
+  - action: utter_goodbye

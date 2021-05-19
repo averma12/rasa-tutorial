@@ -46,6 +46,7 @@ nlu:
     - omg ! Man that's so cool
     - thank you
     - thanks
+    - I would like to book for 5 people
 - intent: deny
   examples: |
     - no
@@ -286,15 +287,73 @@ nlu:
     - I want to have continental food
     - I am looking for [Indian](cuisine) food
     - I want to have [Italian](cuisine) food
-- synonym: Italian
-  examples: |
-    - pasta
-    - lasagna
-    - pizza
-
+    - I want to eat [Indian](cuisine) food
+    - I would like to have [Indian](cuisine)
+    - I would like to book for [5]{"entity": "num_people", "value": 5} people
+    - I want to have [Indian](cuisine) food
+    - I would like to have [Indian](cuisine) food
+    - I would like to have [Indian](cuisine) food
 - intent: ask_time
   examples: |
     - what time is right now ?
     - what day is it today ?
     - what's today ?
     - what's yesterday ?
+- intent: telling_phonenum
+  examples: |
+    - i would like to book with the contact number [9436864412](phone_num)
+    - please book with [1111111111](phone_num)
+    - kindly book with [9999999999](phone_num)
+    - ya please take it [5555555555](phone_num)
+    - write it down it is [3333333333](phone_num)
+    - it's [1010653781](phone_num)
+    - sure. [9436864412](phone_num)
+    - [8700981533](phone_num)
+    - yes please note down it is [9436864412](phone_num)
+    - yes please note it down it is [9436864412](phone_num)
+    - it is [9711236681](phone_num)
+    - my contact number will be [8700981613](phone_num)
+    - [8826788729](phone_num)
+    - use [1123344556](phone_num)
+    - book with [3412367841](phone_num)
+    - save it as [8826799364](phone_num)
+    - its [7565433221](phone_num)
+    - I would like to book with the contact number [9820234828](phone_num)
+    - please book with [9820234828](phone_num)
+    - book with [9820234828](phone_num)
+    - yes please note down it is [9820234828](phone_num)
+- intent: telling_numpeople
+  examples: |
+    - please book table for [5](num_people) people
+    - please book table for [10](num_people) people
+    - yes please book table for [2](num_people) people
+    - table for [3](num_people) please
+    - i would like to book for [ten](num_people) people
+    - please book for [five](num_people) guys
+    - can i have a table for [two](num_people)
+    - book the table for [2](num_people) please
+    - [4](num_people) persons
+    - [2](num_people)
+    - [6](num_people) people
+    - book for [8](num_people) persons please
+    - please book for [30](num_people) people
+    - i want booking for [20](num_people) people
+    - it is [6](num_people) people
+    - [15](num_people) people are coming
+    - there are [10](num_people) guests
+    - number of guests are [5](num_people)
+    - group of [20](num_people) person is coming
+    - there will be [10](num_people) people
+    - book for [7](num_people) person
+    - only [2](num_people) people
+    - number of person will be [6](num_people)
+    - it's [9](num_people) people
+    - it is [12](num_people) person
+    - please book table for [6](num_people) people
+    - I would like to book for [5](num_people) people
+    - [6](num_people) people
+- synonym: Italian
+  examples: |
+    - pasta
+    - lasagna
+    - pizza
