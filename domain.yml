@@ -3,16 +3,16 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- get_booking_status
-- get_phone_number
-- goodbye
+- telling_cuisine
 - greet
 - telling_phonenum
-- telling_numpeople
-- telling_cuisine
 - affirm
-- nlu_fallback
+- telling_numpeople
+- goodbye
 - restaurant_search
+- get_booking_status
+- get_phone_number
+- nlu_fallback
 - deny
 - mood_great
 - mood_unhappy

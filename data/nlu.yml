@@ -322,6 +322,7 @@ nlu:
     - yes please note down it is [9820234828](phone_num)
     - my contact number is [9820234828](phone_num)
     - My number is [9820234890](phone_num)
+    - [9820234828](phone_number)[9820234828](phone_num)
 - intent: telling_numpeople
   examples: |
     - please book table for [5](num_people) people
@@ -351,6 +352,7 @@ nlu:
     - it is [12](num_people) person
     - please book table for [6](num_people) people
     - I would like to book for [5](num_people) people
+    - [5](num_people) people
 - intent: get_phone_number
   examples: |
     - My phone number is [9819819810](phone_number)
