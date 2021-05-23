@@ -3,14 +3,16 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- get_booking_status
+- get_phone_number
 - goodbye
-- affirm
-- telling_cuisine
+- greet
 - telling_phonenum
 - telling_numpeople
+- telling_cuisine
+- affirm
 - nlu_fallback
 - restaurant_search
-- greet
 - deny
 - mood_great
 - mood_unhappy
@@ -23,6 +25,7 @@ entities:
 - location
 - num_people
 - phone_num
+- phone_number
 - time
 slots:
   cuisine:
@@ -38,6 +41,9 @@ slots:
     type: any
     influence_conversation: false
   num_people:
+    type: any
+    influence_conversation: false
+  phone_number:
     type: any
     influence_conversation: false
 responses:
@@ -84,19 +90,24 @@ responses:
   - text: please let me know the number of people coming.
   utter_ask_phone_num:
   - text: please share your contact number.
+  utter_ask_number_booking_status:
+  - text: please share your number to get the booking status
   utter_slot_values:
   - text: |
       The information recorded is:
        - num_people: {num_people}
        - phone_no: {phone_num}
 actions:
+- action_check_booking_status
 - action_custom_cuisine
 - action_find_restaurants
 - action_hello_world
 - utter_ask_for_booking
 - utter_ask_num_people
+- utter_ask_number_booking_status
 - utter_ask_phone_num
 - utter_goodbye
+- utter_greet
 - utter_rephrase
 - utter_restaurant_search
 - utter_slot_values

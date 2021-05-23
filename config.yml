@@ -8,6 +8,7 @@ pipeline:
  # See https://rasa.com/docs/rasa/tuning-your-model for more information.
    - name: WhitespaceTokenizer
    - name: RegexFeaturizer
+   - name: RegexEntityExtractor
    - name: LexicalSyntacticFeaturizer
    - name: CountVectorsFeaturizer
    - name: CountVectorsFeaturizer
@@ -41,7 +42,7 @@ policies:
      epochs: 100
      constrain_similarities: True
    - name: RulePolicy
-     core_fallback_threshold: 0.5
+     core_fallback_threshold: 0.3
      enable_fallback_prediction: True
      core_fallback_action_name: utter_rephrase
 

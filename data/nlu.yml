@@ -46,7 +46,6 @@ nlu:
     - omg ! Man that's so cool
     - thank you
     - thanks
-    - I would like to book for 5 people
 - intent: deny
   examples: |
     - no
@@ -292,7 +291,6 @@ nlu:
     - I would like to book for [5]{"entity": "num_people", "value": 5} people
     - I want to have [Indian](cuisine) food
     - I would like to have [Indian](cuisine) food
-    - I would like to have [Indian](cuisine) food
 - intent: ask_time
   examples: |
     - what time is right now ?
@@ -322,6 +320,8 @@ nlu:
     - please book with [9820234828](phone_num)
     - book with [9820234828](phone_num)
     - yes please note down it is [9820234828](phone_num)
+    - my contact number is [9820234828](phone_num)
+    - My number is [9820234890](phone_num)
 - intent: telling_numpeople
   examples: |
     - please book table for [5](num_people) people
@@ -351,9 +351,24 @@ nlu:
     - it is [12](num_people) person
     - please book table for [6](num_people) people
     - I would like to book for [5](num_people) people
-    - [6](num_people) people
+- intent: get_phone_number
+  examples: |
+    - My phone number is [9819819810](phone_number)
+    - Phone no is [7890789011](phone_number)
+    - [8989898988]
+    - [9820234828](phone_number)[9820234828](phone_num)
+- intent: get_booking_status
+  examples: |
+    - Please provide me booking status
+    - I want to know the booking status
+    - Can you tell me my booking status
+    - I want to know my booking status
 - synonym: Italian
   examples: |
     - pasta
     - lasagna
     - pizza
+
+- regex: phone_number
+  examples: |
+    - ^[789]\d{9}$
