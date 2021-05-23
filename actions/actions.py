@@ -13,7 +13,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from .cusine_restaurants import Restaurant_List
+from .cusine_restaurants import Restaurant_List,Booking_Status
 #
 #
 class ActionHelloWorld(Action):
@@ -65,7 +65,23 @@ class ActionFindRestaurants(Action):
         dispatcher.utter_message(f"These are the restaurants I found {restaurants}")
 
 
-        return [SlotSet("cuisine",None)]
+        return []
+
+class ActionBookingStatus(Action):
+    def name(self) -> Text:
+        return "action_check_booking_status"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        phone_number = tracker.get_slot("phone_number")
+        if phone_number in Booking_Status.keys():
+            message = Booking_Status[phone_number]
+            dispatcher.utter_message(message)
+        else:
+            dispatcher.utter_message("No Booking status available")
+        return []
 
 
 

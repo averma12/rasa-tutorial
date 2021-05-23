@@ -3,20 +3,30 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- restaurant_search
-- greet
+- get_booking_status
+- get_phone_number
 - goodbye
+- greet
+- telling_phonenum
+- telling_numpeople
+- telling_cuisine
 - affirm
+- nlu_fallback
+- restaurant_search
 - deny
 - mood_great
 - mood_unhappy
 - bot_challenge
 - bot_objective
-- telling_cuisine
 - get_location
+- ask_time
 entities:
 - cuisine
 - location
+- num_people
+- phone_num
+- phone_number
+- time
 slots:
   cuisine:
     type: text
@@ -24,6 +34,18 @@ slots:
   restaurants:
     type: list
     influence_conversation: true
+  time:
+    type: any
+    influence_conversation: false
+  phone_num:
+    type: any
+    influence_conversation: false
+  num_people:
+    type: any
+    influence_conversation: false
+  phone_number:
+    type: any
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hey! How are you, this is utter_greet?
@@ -37,7 +59,7 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_rephrase:
-  - text: I did not get you . Can you repeat it biyaach ?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
@@ -58,8 +80,42 @@ responses:
   - text: Let me search restaurants for that cuisine for you
   utter_sorry_cuisine:
   - text: Sorry we don't seem to have that cuisine available today
+  utter_time:
+  - text: It is {time}.
+  utter_default:
+  - text: I'm sorry, I can't help you.
+  utter_ask_for_booking:
+  - text: Would you like to make a booking
+  utter_ask_num_people:
+  - text: please let me know the number of people coming.
+  utter_ask_phone_num:
+  - text: please share your contact number.
+  utter_ask_number_booking_status:
+  - text: please share your number to get the booking status
+  utter_slot_values:
+  - text: |
+      The information recorded is:
+       - num_people: {num_people}
+       - phone_no: {phone_num}
 actions:
+- action_check_booking_status
 - action_custom_cuisine
 - action_find_restaurants
 - action_hello_world
+- utter_ask_for_booking
+- utter_ask_num_people
+- utter_ask_number_booking_status
+- utter_ask_phone_num
+- utter_goodbye
+- utter_greet
+- utter_rephrase
 - utter_restaurant_search
+- utter_slot_values
+forms:
+  restaurant_form:
+    num_people:
+    - type: from_entity
+      entity: num_people
+    phone_num:
+    - type: from_entity
+      entity: phone_num
