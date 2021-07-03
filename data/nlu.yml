@@ -357,18 +357,19 @@ nlu:
     - Phone no is [7890789011](phone_number)
     - [8989898988]
     - [9820234828](phone_number)[9820234828](phone_num)
+    - My phone number is [9820234828](phone_number)
 - intent: get_booking_status
   examples: |
     - Please provide me booking status
     - I want to know the booking status
     - Can you tell me my booking status
     - I want to know my booking status
+    - I would like to know my booking status
 - synonym: Italian
   examples: |
     - pasta
     - lasagna
     - pizza
-
 - regex: phone_number
   examples: |
     - ^[789]\d{9}$

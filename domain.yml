@@ -4,9 +4,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - get_booking_status
-- get_phone_number
-- goodbye
 - greet
+- goodbye
+- get_phone_number
 - telling_phonenum
 - telling_numpeople
 - telling_cuisine

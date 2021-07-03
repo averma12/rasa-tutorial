@@ -292,9 +292,21 @@ stories:
   - intent: get_phone_number
     entities:
     - phone_number: '9820234828'
-    - phone_num: '9820234828'
   - slot_was_set:
-    - phone_num: '9820234828'
+    - phone_number: '9820234828'
+  - action: action_check_booking_status
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_booking_status
+  - action: utter_ask_number_booking_status
+  - intent: get_phone_number
+    entities:
+    - phone_number: '9820234828'
   - slot_was_set:
     - phone_number: '9820234828'
   - action: action_check_booking_status
