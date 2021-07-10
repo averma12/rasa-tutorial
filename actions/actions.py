@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet,SessionStarted, ActionExecuted, EventType
 from .cusine_restaurants import Restaurant_List,Booking_Status
 #
 #
@@ -83,7 +83,37 @@ class ActionBookingStatus(Action):
             dispatcher.utter_message("No Booking status available")
         return []
 
-
+# class ActionSessionStart(Action):
+#     def name(self) -> Text:
+#         return "action_session_start"
+#
+#     @staticmethod
+#     def fetch_slots(tracker: Tracker) -> List[EventType]:
+#         """Collect slots that contain the user's name and phone number."""
+#         print("Action session start called")
+#
+#         slots = []
+#         for key in ("cuisine", "restaurants"):
+#             value = tracker.get_slot(key)
+#             if value is not None:
+#                 slots.append(SlotSet(key=key, value=value))
+#         return slots
+#
+#     async def run(
+#       self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+#     ) -> List[Dict[Text, Any]]:
+#
+#         # the session should begin with a `session_started` event
+#         events = [SessionStarted()]
+#
+#         # any slots that should be carried over should come after the
+#         # `session_started` event
+#         events.extend(self.fetch_slots(tracker))
+#
+#         # an `action_listen` should be added at the end as a user message follows
+#         events.append(ActionExecuted("action_listen"))
+#
+#         return events
 
 
 
